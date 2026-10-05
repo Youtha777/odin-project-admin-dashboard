@@ -38,14 +38,26 @@ button{
 
 .sidebar{
   background-color: skyblue;
-  display: grid;
-  grid-template-columns: repeat (3, 1fr);
-  grid-row: 1 /-1;
+  grid-row: 1 / -1;
   align-items: center;
-  gap: 10px;
 }
 
-.logo-title{z
-
+.logo-title{
+  margin-bottom: 50px;
 }
+
+h2 img {
+  vertical-align:middle;
+}
+
+li{
+  list-style: none;
+  font-size:20px;
+  margin-bottom: 15px;
+}
+
+ul{
+  margin-bottom: 75px;
+}
+
 
