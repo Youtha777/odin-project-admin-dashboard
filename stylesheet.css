@@ -13,7 +13,6 @@ html, body{
 
 .grid-container{
   display: grid;
-  gap: 5px;
   grid-template-columns: 275px 1fr 1fr 1fr;
   grid-template-rows: repeat(6, 1fr);
   min-height: 100vh;
@@ -21,8 +20,10 @@ html, body{
 
 .header{
   display: grid;
+  height: 50px;
   grid-column: 2 / -1;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px 1fr;
 }
 
 .search-sec{
@@ -132,4 +133,73 @@ ul{
   margin-bottom: 75px;
 }
 
+.project-sec{
+  display: grid;
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 75px 1fr 1fr;
+  background-color: rgb(230, 236, 236);
+  padding-left: 10px;
+  
+}
 
+.project{
+  justify-self: start;
+}
+
+.articles{
+  display: grid;
+  grid-column: 1 / 3;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.announcement {
+  grid-column: 3 / -1;
+  justify-self: start;
+}
+
+.card-icon {
+  text-align: right;
+}
+
+.card{
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  
+  /* Accent left stripe (Odin Project / modern dashboard style) */
+  border-left: 6px solid #e53935; /* matches your red Pokeball accent */
+  
+  /* Layout inside the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  
+  /* Card sizing */
+  max-width: 320px;
+  min-height: 180px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.side-card{
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  
+  
+  /* Layout inside the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  
+  /* Card sizing */
+  max-width: 320px;
+  min-height: 180px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
