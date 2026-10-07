@@ -1,7 +1,34 @@
-body{
+html, body{
   font-family: "Clarity City", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.pokeball-icon{
+  margin-left: 25px;
+}
+
+.grid-container{
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 275px 1fr 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  min-height: 100vh;
+}
+
+.header{
+  display: grid;
+  grid-column: 2 / -1;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.search-sec{
+  justify-self: start;
+  grid-column: 1 / span 2;
+  padding-left: 10px;
 }
 
 .search-bar {
@@ -11,25 +38,56 @@ body{
   margin-right: 100px;
 }
 
-.pokeball-icon{
-  margin-left: 25px;
+.user-sec{
+  grid-column: 3 / 4;
 }
 
-button{
-  border-radius: 10px;
+.user-sec > h2 {
+  display: inline;
+}
+
+.user-greeting{
+  padding-left: 10px;
+  padding-top: 10px;
+  grid-column: 1 / span 2;
+  gap: 12px;
+}
+
+.user-greeting h3,
+.user-greeting h2 {
+  margin: 0;
+}
+
+.user-greeting > h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.username {
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 2px;
+  padding: 0;
+  margin: 0;
+}
+
+.header-btns {
+  align-self: center;
+  grid-column: 3 / 4;
+}
+
+.header-btns > button {
+  width: 75px;
+  height: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 13px;
   background-color: red;
   color: white;
-}
+  border: none;
+  box-shadow: none;
+  outline: none;
 
-.grid-container{
-  display: grid;
-  gap: 5px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-}
-
-.header{
-  grid-column: 2 / -1;
 }
 
 .dashboard-icon{
@@ -37,13 +95,19 @@ button{
 }
 
 .sidebar{
-  background-color: skyblue;
+  background-color: black;
   grid-row: 1 / -1;
   align-items: center;
 }
 
 .logo-title{
   margin-bottom: 50px;
+  color: white;
+}
+
+.dashboard-icon{
+  vertical-align: middle;
+  filter: brightness(0) invert(1);
 }
 
 img {
@@ -54,10 +118,12 @@ li{
   list-style: none;
   font-size:20px;
   margin-bottom: 15px;
+  color: white;
 }
 
 li img{
   padding-right: 8px;
+  filter: brightness(0) invert(1);
 }
 
 ul{
